@@ -12,7 +12,7 @@ extern int coordonne_robot[2];
 extern int direction_robot[2];
 extern int robot_path[MAP_SIZE * MAP_SIZE][2];
 extern int steps;
-extern int EVASION_MODE; // New: Flag for evasion state
+extern int EVASION_MODE;
 
 typedef enum {
     AVANCER,
@@ -110,3 +110,4 @@ int remplir_Chemin(Case* start, Case* goal, int path[MAP_SIZE*MAP_SIZE][2]);
 int move_to_waypoint(int wp[2], queue *n, queue *u, FILE* f);
 int follow_waypoints_grid(int waypoints[MAP_SIZE*MAP_SIZE][2], int n_waypoints, queue *n, queue *u, FILE* f);
 #endif
+
