@@ -12,7 +12,7 @@ int coordonne_robot[2] = {95, 4}; // Start coordinates (Y, X)
 int direction_robot[2] = {0, 1};  // Initial direction (0, 1) = East
 int robot_path[MAP_SIZE * MAP_SIZE][2];
 int steps = 0;
-int EVASION_MODE = 0; // The new global flag for evasion
+int EVASION_MODE = 0; 
 
 int dir4[4][2] = {
     {-1, 0},  // 0: Nord
@@ -26,13 +26,12 @@ int in_bounds(int y, int x) {
 }
 
 int able_proceed(int a, int d, int y_c, int x_c, int a_c, int d_c) {
-    /* kept original semantics, but use MAP_SIZE constants */
     if (y_c < 9 && (a == 1 || d == 1)) return 0;
 
     if (a == 0 && a_c == 0) {
         if (d != d_c) return 0;
         else {
-            if (d == 0) return  (x_c < MAP_SIZE - 5); /* was 95 */
+            if (d == 0) return  (x_c < MAP_SIZE - 5); 
             else return (x_c > 4);
         }
     }
@@ -828,3 +827,4 @@ int move_to_waypoint(int wp[2], queue *n, queue *u, FILE* f) {
 
     return 1;
 }
+
