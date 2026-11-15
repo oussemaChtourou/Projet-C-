@@ -25,7 +25,7 @@ PPM Image Output: Generates three visual maps for analysis:
 The project is divided into three main files:
 - main.c: Controls the simulation flow
 - map.h : Header file defining all data structures 
-- map.c : Contains all the implementation logic
+- map.c : Contains all the implementation logic 
 
 sources:
 image processing : https://www.youtube.com/watch?v=LRajghjH5BI&t=1425s - https://www.youtube.com/watch?v=dCqIKDo_Hkc
